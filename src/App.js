@@ -1,25 +1,28 @@
 import { Box, Stack } from "@mui/material";
+import { ThemeProvider } from "@mui/system";
 import ChatRoom from "./components/ChatRoom";
-import MessageWindow from "./components/MessageWindow";
 import Rightbar from "./components/Rightbar";
-import Sidebar from "./components/Sidebar";
+import "./theme.js";
 import NewColumn from "./components/Sidebar/Newcolumn";
+import { myTheme } from "./theme.js";
 
 function App() {
   return (
-    <div className="App" style={{ overflow: "hidden" }}>
-      <Box>
-        <Stack
-          direction="row"
-          justifyContent="space-between"
-          sx={{ overflow: "hidden" }}
-        >
-          <NewColumn />
-          <ChatRoom />
-          <Rightbar />
-        </Stack>
-      </Box>
-    </div>
+    <ThemeProvider theme={myTheme}>
+      <div className="App" style={{ overflow: "hidden" }}>
+        <Box>
+          <Stack
+            direction="row"
+            justifyContent="space-between"
+            sx={{ overflow: "hidden" }}
+          >
+            <NewColumn />
+            <ChatRoom />
+            <Rightbar />
+          </Stack>
+        </Box>
+      </div>
+    </ThemeProvider>
   );
 }
 

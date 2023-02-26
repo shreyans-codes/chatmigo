@@ -1,10 +1,1 @@
 // Shreyans' end
-For main message window (Dhriti):
-    1. Set flex to 6 for Box component
-    2. Change image locations to 'assets/images/dp.jpg' etc
-    3. Use height in % rather than vh
-For side bar window (Riya):
-    1. Set flex to 3 for Box component
-    2. Set grid height to 100% (Newcolumn.js)
-    3. Change grid xs properties
-    4. 

@@ -9,10 +9,11 @@ import MoreVertIcon from "@mui/icons-material/MoreVert";
 const ChatHeader = () => {
   return (
     <Box>
-      <AppBar position="static">
+      <AppBar position="static" elevation={0}>
         <Toolbar
           sx={{
-            backgroundColor: "#3A98B9",
+            backgroundColor: "#f2f2f2",
+            color: "black",
             display: "flex",
             justifyContent: "space-between",
             padding: "5px",

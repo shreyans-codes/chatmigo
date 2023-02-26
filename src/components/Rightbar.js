@@ -132,7 +132,7 @@ const Rightbar = (props) => {
       </IconButton>
       <Stack justifyContent={"space-evenly"} p={2} textAlign={"center"}>
         <Typography sx={{ padding: "8px 0px", fontSize: "30px" }}>
-          NOVOCHAT 🔥
+          CHATMIGO 🔥
         </Typography>
         <Avatar
           src={imgSrc}

@@ -1,5 +1,13 @@
 import React, { useState } from "react";
-import { Grid, Paper, TextField, Avatar, IconButton, Box } from "@mui/material";
+import {
+  Grid,
+  Paper,
+  TextField,
+  Avatar,
+  IconButton,
+  Box,
+  Typography,
+} from "@mui/material";
 // import { Send, Mic, MoreVert } from '@mui/icons-material';
 import SentimentSatisfiedRoundedIcon from "@mui/icons-material/SentimentSatisfiedRounded";
 import AttachFileRoundedIcon from "@mui/icons-material/AttachFileRounded";
@@ -65,7 +73,7 @@ const ChatBody = () => {
           item
           xs={12}
           sx={{
-            backgroundColor: "beige",
+            backgroundColor: "#F5EDED",
             height: "76.8vh",
             overflowY: "scroll",
           }}
@@ -89,30 +97,26 @@ const ChatBody = () => {
                     padding: "8px 12px",
                     borderRadius: "12px",
                     backgroundColor:
-                      message.from === "self" ? "#DCF8C6" : "#FFFFFF",
+                      message.from === "self" ? "secondary" : "#ecf9ff",
                   }}
                 >
-                  {message.text}
+                  <Typography>{message.text}</Typography>
                 </Paper>
               </div>
             ))}
           </Box>
         </Grid>
-        <Grid item xs={12} sx={{ backgroundColor: "#3A98B9" }}>
+        <Grid item xs={12} sx={{ backgroundColor: "white", color: "black" }}>
           <Box sx={{ p: 1, m: 1 }}>
             <Grid container spacing={2}>
               <Grid item xs={1}>
                 <IconButton sx={{ height: "100%", marginTop: "-4px" }}>
-                  <SentimentSatisfiedRoundedIcon
-                    sx={{ fontSize: "30px", color: "white" }}
-                  />
+                  <SentimentSatisfiedRoundedIcon sx={{ fontSize: "30px" }} />
                 </IconButton>
               </Grid>
               <Grid item xs={1}>
                 <IconButton sx={{ height: "100%", marginTop: "-4px" }}>
-                  <AttachFileRoundedIcon
-                    sx={{ fontSize: "30px", color: "white" }}
-                  />
+                  <AttachFileRoundedIcon sx={{ fontSize: "30px" }} />
                 </IconButton>
               </Grid>
               <Grid item xs={9}>
@@ -133,7 +137,7 @@ const ChatBody = () => {
                 <IconButton sx={{ height: "100%" }}>
                   <SendIcon
                     onClick={handleSendMessage}
-                    sx={{ fontSize: "35px", color: "white" }}
+                    sx={{ fontSize: "35px" }}
                   />
                 </IconButton>
               </Grid>

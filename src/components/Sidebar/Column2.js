@@ -58,7 +58,7 @@ export default function Column2() {
   return (
     <Box
       bgcolor={"white"}
-      sx={{ mt: 2 }}
+      sx={{ height: "100%", pt: 2 }}
       //  m={0}
       //  width={250}
     >
@@ -71,12 +71,10 @@ export default function Column2() {
           inputProps={{ "aria-label": "search" }}
         />
       </Search>
-
       <Box
         sx={{
           // width: "80vh",
           // maxWidth: 300,
-          bgcolor: "background.paper",
           // ml:3,
           overflow: "hidden",
         }}

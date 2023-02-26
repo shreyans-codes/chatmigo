@@ -53,7 +53,6 @@ export default function Column1() {
           <MenuItem onClick={handleClose}>New Chat</MenuItem>
           <MenuItem onClick={handleClose}>New Group</MenuItem>
         </Menu>
-        <Divider />
         <ListItem disablePadding>
           <ListItemButton>
             <ListItemIcon
