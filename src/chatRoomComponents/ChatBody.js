@@ -1,13 +1,5 @@
 import React, { useState } from "react";
-import {
-  Grid,
-  Paper,
-  TextField,
-  Avatar,
-  IconButton,
-  Box,
-  Typography,
-} from "@mui/material";
+import { Grid, Paper, TextField, Avatar, IconButton, Box, Typography } from "@mui/material";
 // import { Send, Mic, MoreVert } from '@mui/icons-material';
 import SentimentSatisfiedRoundedIcon from "@mui/icons-material/SentimentSatisfiedRounded";
 import AttachFileRoundedIcon from "@mui/icons-material/AttachFileRounded";
@@ -73,8 +65,8 @@ const ChatBody = () => {
           item
           xs={12}
           sx={{
-            backgroundColor: "#F5EDED",
-            height: "76.8vh",
+            backgroundColor: "white",
+            height: "75.7vh",
             overflowY: "scroll",
           }}
         >
@@ -87,7 +79,7 @@ const ChatBody = () => {
                 {message.from === "self" ? (
                   <div style={{ flexGrow: 1 }}></div>
                 ) : (
-                  <Avatar sx={{ marginRight: "8px" }}>U</Avatar>
+                  <Avatar sx={{ marginRight: "8px" }} src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"></Avatar>
                 )}
                 <Paper
                   variant="outlined"
@@ -96,27 +88,35 @@ const ChatBody = () => {
                     maxWidth: "60%",
                     padding: "8px 12px",
                     borderRadius: "12px",
+                    color:
+                      message.from === "self" ? "#F5F7FB" : "black",
                     backgroundColor:
-                      message.from === "self" ? "secondary" : "#ecf9ff",
+                      message.from === "self" ? "#0081B4" : "#F5F7FB",
                   }}
                 >
-                  <Typography>{message.text}</Typography>
+                  <Typography>
+                  {message.text}
+                  </Typography>
                 </Paper>
               </div>
             ))}
           </Box>
         </Grid>
-        <Grid item xs={12} sx={{ backgroundColor: "white", color: "black" }}>
+        <Grid item xs={12} sx={{ backgroundColor: "#F5F7FB" }}>
           <Box sx={{ p: 1, m: 1 }}>
             <Grid container spacing={2}>
               <Grid item xs={1}>
                 <IconButton sx={{ height: "100%", marginTop: "-4px" }}>
-                  <SentimentSatisfiedRoundedIcon sx={{ fontSize: "30px" }} />
+                  <SentimentSatisfiedRoundedIcon
+                    sx={{ fontSize: "30px", color: "#000025" }}
+                  />
                 </IconButton>
               </Grid>
               <Grid item xs={1}>
                 <IconButton sx={{ height: "100%", marginTop: "-4px" }}>
-                  <AttachFileRoundedIcon sx={{ fontSize: "30px" }} />
+                  <AttachFileRoundedIcon
+                    sx={{ fontSize: "30px", color: "#000025" }}
+                  />
                 </IconButton>
               </Grid>
               <Grid item xs={9}>
@@ -137,7 +137,7 @@ const ChatBody = () => {
                 <IconButton sx={{ height: "100%" }}>
                   <SendIcon
                     onClick={handleSendMessage}
-                    sx={{ fontSize: "35px" }}
+                    sx={{ fontSize: "35px", color: "#000025" }}
                   />
                 </IconButton>
               </Grid>

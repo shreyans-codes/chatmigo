@@ -5,7 +5,6 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItem from "@mui/material/ListItem";
 import ChatIcon from "@mui/icons-material/Chat";
-import Divider from "@mui/material/Divider";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 import SettingsIcon from "@mui/icons-material/Settings";
@@ -20,7 +19,7 @@ export default function Column1() {
   const handleClose = () => setOptionAnchorEl(false);
   return (
     // Menu box
-    <Box bgcolor={"#0A1929"} height={"100vh"}>
+    <Box bgcolor={"#0081B4"} height={"100vh"}>
       <List>
         <ListItem disablePadding>
           <ListItemButton href="#Home">
